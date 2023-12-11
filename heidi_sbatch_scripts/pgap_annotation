@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH --job-name=pgap_annotation
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=2
+#SBATCH --mem-per-cpu=32G
+#SBATCH --chdir=/scratch/ha127954/
+
+export PGAP_INPUT_DIR=/scratch/ha127954
+
+/scratch/ha127954/pgap.py -o /scratch/ha127954/20Bon3_SB_pgap/ -g /scratch/ha127954/20Bon3_SB_all.fasta -s 'cyanobacterium endosymbiont of Rhopalodia gibba' -c 2 -r -D singularity --container-name /scratch/ha127954/pgap_2023-10-03.build7061.sif --no-self-update
