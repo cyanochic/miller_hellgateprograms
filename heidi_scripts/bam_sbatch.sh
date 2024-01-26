@@ -5,11 +5,7 @@
 #SBATCH --ntasks=64
 #SBATCH --mem-per-cpu=64
 
-PREFIX=$1 #prefix to use for bwa
-REFSEQ=$2 #path to reference sequence (must be .fasta)
-FWD=$3 #path to forward reads .fastq (or .fastq.gz)
-RVS=$4 #path to reverse reads .fastq
-FILENAME=$5 #prefix name for all outputs
+CONTAINER_PATH=~/bin/
+prefix=$1
 
-
-~/bin/bam_illumina_inprogress.sh PREFIX REFSEQ FWD RVS FILENAME
+~/bin/bam_illumina.sh ${prefix} ${prefix}_scaf_filtered.fasta /scratch/ha127954/sc4368/4368_${prefix}_R1.fastq.gz /scratch/ha127954/sc4368/4368_${prefix}_R2.fastq.gz 4368_${prefix}
