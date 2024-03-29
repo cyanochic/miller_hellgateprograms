@@ -1,9 +1,10 @@
 #!/bin/bash
 
-#SBATCH --job-name=22EEL06_blast
+#SBATCH --job-name=selectnodes
 #SBATCH --nodes=1
-#SBATCH --mem-per-cpu=172G
-#SBATCH --cpus-per-task=2
+#SBATCH --ntasks-per-node=2
+#SBATCH --cpus-per-task=24
+#SBATCH --mem=96
 
 prefix=$1
 
