@@ -13,4 +13,4 @@ align=$1 #with IQtree2 I think this will take either a file (e.g. SpeciesTreeAli
 prefix=$2
 
 
-apptainer exec --bind /scratch/${netID}/ --bind /projects/${netID}/  ${iqtree} iqtree2 -s ${align} -B 1000 -alrt 1000 -m TEST --prefix ${prefix} -T AUTO
+apptainer exec --bind /scratch/${netID}/ --bind /projects/${netID}/  ${iqtree} iqtree2 -s ${align} -B 1000 -alrt 1000 -m TEST --prefix ${prefix} -T AUTO -nt AUTO
