@@ -1,5 +1,8 @@
 #!/bin/bash
 
+##This script takes the prokka gff output and pseudofinder \_intact.gff output and make a new output that only includes genes marked as "intact" by pseudofinder (\_cut.gff). This is by no means perfect and is probably very inefficient computationally. For one, it doesn't include pseudogenes/pseudogenic_exons in the new gff file. But it does make gff files that are usable by Roary.
+
+
 # Check if correct number of arguments are provided
 if [ "$#" -ne 3 ]; then
     echo "Usage: $0 input_gff_file locus_tags_file output_gff_file"
