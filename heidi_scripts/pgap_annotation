@@ -5,7 +5,6 @@
 #SBATCH --cpus-per-task=2
 #SBATCH --mem-per-cpu=64G
 
-netID=yourNetID #CHANGE THIS TO YOUR NETID
 containername=name_of_container #put path to your PGAP container
 pgap=path/to/pgap.py #change to where you have pgap.py
 outdir=$1
@@ -14,4 +13,4 @@ taxid=$3 #taxonomy name from NCBI, must be in single quotes
 
 export PGAP_INPUT_DIR=/scratch/${netID}
 
-/scratch/${netID}/pgap.py --no-self-update -o ${outdir} -g ${genome} -s ${taxid} -c 2 -r -D singularity --container-name ${containername}
+/scratch/$USER/pgap.py --no-self-update -o ${outdir} -g ${genome} -s ${taxid} -c 2 -r -D singularity --container-name ${containername}
