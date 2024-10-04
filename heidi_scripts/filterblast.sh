@@ -9,9 +9,9 @@ prefix=$1
 
 blast=~/bin/blast.sif #blast container
 quast=~/bin/quast.sif #quast container
-#fwd=/scratch/ha127954/sc4368/4368_${prefix}_R1.fastq.gz #path to forward raw reads
-#rvs=/scratch/ha127954/sc4368/4368_${prefix}_R2.fastq.gz #path to rvs raw reads
-#output=/scratch/ha127954/4368_${prefix}_assembly/ #path to output directory
+#fwd=/scratch/$USER/sc4368/4368_${prefix}_R1.fastq.gz #path to forward raw reads
+#rvs=/scratch/$USER/sc4368/4368_${prefix}_R2.fastq.gz #path to rvs raw reads
+#output=/scratch/$USER/4368_${prefix}_assembly/ #path to output directory
 SBdb=/projects/ha127954/referenceGenomes/EgibBon17_SB.fasta
 cpdb=/projects/ha127954/referenceGenomes/Egib17Bon1_cp.fasta
 mtdb=/projects/ha127954/referenceGenomes/Egib17Bon1_mt.fasta
