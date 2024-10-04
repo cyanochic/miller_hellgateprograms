@@ -9,4 +9,4 @@ CONTAINER_PATH=~/bin/
 fasta=$1
 outdir=$2
 
-apptainer exec --bind /scratch/ha127954/ $CONTAINER_PATH/quast.sif quast.py ${fasta} -o ${outdir} -t 16
+apptainer exec --bind /scratch/$USER/ $CONTAINER_PATH/quast.sif quast.py ${fasta} -o ${outdir} -t 16
