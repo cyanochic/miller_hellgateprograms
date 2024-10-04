@@ -8,12 +8,11 @@
 
 prefix=$1
 
-netID=ha127954 #your net ID
 blast=~/bin/blast.sif #blast container
 quast=~/bin/quast.sif #quast container
 
 mkdir selectednodes/
-apptainer exec --bind /scratch/${netID}/ ${blast} blastdbcmd -entry_batch localblast/${prefix}_SB_seqIDs.txt -db scaffolds.fasta -target_only -out selectednodes/${prefix}_SB_chr.fasta
+apptainer exec --bind /scratch/$USER/ ${blast} blastdbcmd -entry_batch localblast/${prefix}_SB_seqIDs.txt -db scaffolds.fasta -target_only -out selectednodes/${prefix}_SB_chr.fasta
 
 mkdir SBquast/
-apptainer exec --bind /scratch/${netID}/ ${quast} quast.py selectednodes/${prefix}_SB_chr.fasta -o SBquast/
+apptainer exec --bind /scratch/$USER/ ${quast} quast.py selectednodes/${prefix}_SB_chr.fasta -o SBquast/
