@@ -7,4 +7,4 @@
 
 CONTAINER_PATH=~/bin/
 
-apptainer exec --bind /scratch/ha127954 --bind /projects/ha127954 $CONTAINER_PATH/fastqc.sif fastqc *.fastq.gz
+apptainer exec --bind /scratch/$USER/ --bind /projects/$USER/ $CONTAINER_PATH/fastqc.sif fastqc *.fastq.gz
