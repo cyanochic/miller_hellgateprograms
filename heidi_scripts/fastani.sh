@@ -7,10 +7,9 @@
 #SBATCH --cpus-per-task=24
 #SBATCH --mem=96G
 
-netID=ha127954 #your net ID
 fastani=~/bin/fastani.sif #fastani container
 query=$1
 reference=$2
 output=$3
 
-apptainer exec --bind /scratch/${netID}/ --bind /projects/${netID}/ ${fastani} fastANI --ql ${query} --rl ${reference} -o ${output} --matrix
+apptainer exec --bind /scratch/$USER/ --bind /projects/$USER/ ${fastani} fastANI --ql ${query} --rl ${reference} -o ${output} --matrix
