@@ -5,7 +5,7 @@
 #samtools version 1.18
 
 #apptainer commands
-APPTAINER="apptainer exec --bind /scratch/ha127954"
+APPTAINER="apptainer exec --bind /scratch/$USER"
 BWA=~/bin/bwa.sif
 SAMTOOLS=~/bin/samtools.sif
 
